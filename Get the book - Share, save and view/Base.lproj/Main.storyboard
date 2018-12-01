@@ -342,10 +342,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0ln-tE-i9t"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scan" id="nKb-tQ-zMa"/>
+                    <navigationItem key="navigationItem" title="Scan" id="qM1-DA-Fe6">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="oG5-SU-Reg">
+                            <connections>
+                                <segue destination="vt1-Dr-t60" kind="show" id="KMr-e1-hcg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="square" destination="Jwd-UZ-r23" id="bz0-CK-AM7"/>
-                        <segue destination="vt1-Dr-t60" kind="show" identifier="showDetails" id="YCm-VL-7KW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -510,6 +515,6 @@
         <image name="square.png" width="276" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="92K-B2-iYv"/>
+        <segue reference="v1j-Lo-kYh"/>
     </inferredMetricsTieBreakers>
 </document>
