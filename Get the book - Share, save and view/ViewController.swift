@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var square: UIImageView!
@@ -18,11 +19,11 @@ var video = AVCaptureVideoPreviewLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //Creating session
         let session = AVCaptureSession()
         
         //Define capture devcie
-        //let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         let captureDevice = AVCaptureDevice.default(for: .video)
         
         do
