@@ -1,34 +1,33 @@
 //
 //  ViewController.swift
-//  Get the book - Share, save and view
+//  QRReader
 //
-//  Created by Hemanth Kasoju on 2018-11-12.
-//  Copyright © 2018 Hemanth Kasoju. All rights reserved.
+//  Created by Pratheeksha Ravindra Naik on 11.11.2018.
+//  Copyright © 2018. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var square: UIImageView!
     
-    
-var video = AVCaptureVideoPreviewLayer()
+    var video = AVCaptureVideoPreviewLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         
         //Creating session
         let session = AVCaptureSession()
         
         //Define capture devcie
-        let captureDevice = AVCaptureDevice.default(for: .video)
+        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         
         do
         {
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
+            let input = try AVCaptureDeviceInput(device: captureDevice)
             session.addInput(input)
         }
         catch
@@ -39,18 +38,17 @@ var video = AVCaptureVideoPreviewLayer()
         let output = AVCaptureMetadataOutput()
         session.addOutput(output)
         
-        output.setMetadataObjectsDelegate(self as? AVCaptureMetadataOutputObjectsDelegate, queue: DispatchQueue.main)
+        output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         
-        output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+        output.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
         
         video = AVCaptureVideoPreviewLayer(session: session)
         video.frame = view.layer.bounds
         view.layer.addSublayer(video)
         
-        self.view.bringSubviewToFront(square)
+        self.view.bringSubview(toFront: square)
         
         session.startRunning()
-        
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
@@ -59,7 +57,7 @@ var video = AVCaptureVideoPreviewLayer()
         {
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
             {
-                if object.type == AVMetadataObject.ObjectType.qr
+                if object.type == AVMetadataObjectTypeQRCode
                 {
                     let alert = UIAlertController(title: "QR Code", message: object.stringValue, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
@@ -77,6 +75,6 @@ var video = AVCaptureVideoPreviewLayer()
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
 }
-

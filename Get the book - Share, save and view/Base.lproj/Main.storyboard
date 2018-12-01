@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OZx-zY-Ss0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xKd-PJ-Gt9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,10 +87,13 @@
                         <color key="backgroundColor" red="0.69625375321544891" green="0.93690921368838453" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="YJ2-XH-7sm" kind="show" identifier="start" id="f0Q-2l-JoJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1196" y="27"/>
+            <point key="canvasLocation" x="-1574" y="-89"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="543-Oe-Fxq">
@@ -120,10 +124,15 @@
                         <color key="tintColor" red="0.49699798147217988" green="0.92057665949592438" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9pD-bu-259"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AiE-5Q-Ags"/>
+                    <connections>
+                        <segue destination="OZx-zY-Ss0" kind="show" identifier="scanBook" id="92K-B2-iYv"/>
+                        <segue destination="jMp-Eg-tee" kind="show" identifier="showBook" id="JX5-fj-7hO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="215-PT-ikb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="27"/>
+            <point key="canvasLocation" x="-298" y="222"/>
         </scene>
         <!--Book Table View Controller-->
         <scene sceneID="vWZ-K2-KCO">
@@ -179,7 +188,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384.80000000000001" y="768.66566716641682"/>
+            <point key="canvasLocation" x="706" y="27"/>
         </scene>
         <!--Book Details View Controller-->
         <scene sceneID="cX9-cE-b75">
@@ -311,9 +320,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoL-qc-K8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="27"/>
+            <point key="canvasLocation" x="2134" y="-348"/>
         </scene>
-        <!--View Controller-->
+        <!--Scan-->
         <scene sceneID="hgC-Bp-sWd">
             <objects>
                 <viewController id="OZx-zY-Ss0" customClass="ViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
@@ -333,15 +342,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0ln-tE-i9t"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Scan" id="nKb-tQ-zMa"/>
                     <connections>
                         <outlet property="square" destination="Jwd-UZ-r23" id="bz0-CK-AM7"/>
+                        <segue destination="vt1-Dr-t60" kind="show" identifier="showDetails" id="YCm-VL-7KW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1196" y="776"/>
+            <point key="canvasLocation" x="-298" y="1000"/>
         </scene>
-        <!--Display Book Detais View Controller-->
+        <!--Book Details-->
         <scene sceneID="Kyj-vO-reN">
             <objects>
                 <viewController id="YbT-72-cm2" customClass="DisplayBookDetaisViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
@@ -444,6 +455,7 @@
                         <color key="tintColor" red="0.60768525409999996" green="1" blue="0.97778778509999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5y0-wf-ykb"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Book Details" id="CXC-EY-Ga1"/>
                     <connections>
                         <outlet property="authorName" destination="ckE-nx-txR" id="7At-Ga-CBx"/>
                         <outlet property="languageName" destination="Ria-5g-Ps8" id="wbM-vP-E8j"/>
@@ -454,11 +466,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29e-zr-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-404" y="776"/>
+            <point key="canvasLocation" x="1564" y="1000"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6pu-OP-gvb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xKd-PJ-Gt9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mPn-W4-QRo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OZx-zY-Ss0" kind="relationship" relationship="rootViewController" id="v1j-Lo-kYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWQ-R4-7a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1378" y="1000"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JpZ-JO-B7E">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vt1-Dr-t60" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q05-JF-LcK">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YbT-72-cm2" kind="relationship" relationship="rootViewController" id="nKy-gi-LKe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64O-jp-c6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="1000"/>
         </scene>
     </scenes>
     <resources>
         <image name="button" width="300" height="96"/>
         <image name="square.png" width="276" height="276"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="92K-B2-iYv"/>
+    </inferredMetricsTieBreakers>
 </document>
