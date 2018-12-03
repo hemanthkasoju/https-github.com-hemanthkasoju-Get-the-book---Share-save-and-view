@@ -67,8 +67,9 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     //alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in UIPasteboard.general.string = object.stringValue}))
                     
                   //  present(alert, animated: true, completion: nil)
-                    (insert line with navigation code) - uncomment lines if you want to go back
-                    }
+                    performSegue(withIdentifier: "showDetails",sender: self);
+                    
+                }
                 }
             }
         }
