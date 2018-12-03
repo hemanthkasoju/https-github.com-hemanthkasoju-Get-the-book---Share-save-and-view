@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1246" y="-90"/>
+            <point key="canvasLocation" x="-1081" y="-189"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="543-Oe-Fxq">
@@ -135,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="215-PT-ikb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="279" y="-90"/>
+            <point key="canvasLocation" x="322" y="-189"/>
         </scene>
         <!--Book Table View Controller-->
         <scene sceneID="vWZ-K2-KCO">
@@ -191,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="-90"/>
+            <point key="canvasLocation" x="1351" y="-189"/>
         </scene>
         <!--Book Details View Controller-->
         <scene sceneID="cX9-cE-b75">
@@ -323,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoL-qc-K8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="2167.4662668665669"/>
+            <point key="canvasLocation" x="1350" y="2037"/>
         </scene>
         <!--Scan-->
         <scene sceneID="hgC-Bp-sWd">
@@ -350,11 +350,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="square" destination="Jwd-UZ-r23" id="bz0-CK-AM7"/>
+                        <segue destination="YbT-72-cm2" kind="show" identifier="showDetails" id="b2b-K5-LpA"/>
+                        <segue destination="h0a-kc-3Ft" kind="show" identifier="existingDetails" id="lon-Ti-MWa"/>
+                        <segue destination="o1Y-wy-AeF" kind="show" identifier="addDetails" id="VQT-eJ-eQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-382" y="1062"/>
+            <point key="canvasLocation" x="-566" y="1267"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="Kyj-vO-reN">
@@ -470,7 +473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29e-zr-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="651"/>
+            <point key="canvasLocation" x="1350" y="559"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="kVa-9R-clj">
@@ -581,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="re4-wI-cXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1078" y="1391"/>
+            <point key="canvasLocation" x="1350" y="1266"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6pu-OP-gvb">
@@ -599,7 +602,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWQ-R4-7a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1378" y="1000"/>
+            <point key="canvasLocation" x="-1458" y="1062"/>
         </scene>
     </scenes>
     <resources>
@@ -607,6 +610,6 @@
         <image name="square.png" width="276" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hzc-uR-mYr"/>
+        <segue reference="92K-B2-iYv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 import AVFoundation
 
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
@@ -59,22 +60,22 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             {
                 if object.type == AVMetadataObjectTypeQRCode
                 {
-                    let alert = UIAlertController(title: "QR Code", message: object.stringValue, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
-                    alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in
-                        UIPasteboard.general.string = object.stringValue
-                    }))
+                    //Checking if the book does not exist in the device of the user.
                     
-                    present(alert, animated: true, completion: nil)
+                   // let alert = UIAlertController(title: "QR Code", message: object.stringValue, preferredStyle: .alert)
+                    //alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                    //alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in UIPasteboard.general.string = object.stringValue}))
+                    
+                  //  present(alert, animated: true, completion: nil)
+                    (insert line with navigation code) - uncomment lines if you want to go back
+                    }
                 }
             }
         }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }
