@@ -17,7 +17,7 @@ class DisplayBookDetaisViewController: UIViewController {
     @IBOutlet weak var url: UILabel!
     
     @IBAction func shareTapped(_ sender: Any) {
-        let activityController = UIActivityViewController(activityItems: [titleName.text!], applicationActivities: nil)
+        let activityController = UIActivityViewController(activityItems: [titleName.text!,"Author : ", authorName.text!, "Publisher : ", publisherName.text!, "language :", languageName.text!, "URL for online access : ", url.text!, "Location : Archer Library, University of Regina" ], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
