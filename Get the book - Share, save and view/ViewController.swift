@@ -60,14 +60,11 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             {
                 if object.type == AVMetadataObjectTypeQRCode
                 {
-                    //Checking if the book does not exist in the device of the user.
                     
-                   // let alert = UIAlertController(title: "QR Code", message: object.stringValue, preferredStyle: .alert)
-                    //alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
-                    //alert.addAction(UIAlertAction(title: "Copy", style: .default, handler: { (nil) in UIPasteboard.general.string = object.stringValue}))
-                    
-                  //  present(alert, animated: true, completion: nil)
-                    performSegue(withIdentifier: "showDetails",sender: self);
+                   if object.stringValue == "0001"
+                   {
+                       performSegue(withIdentifier: "showDetails",sender: self);
+                    }
                     
                 }
                 }
