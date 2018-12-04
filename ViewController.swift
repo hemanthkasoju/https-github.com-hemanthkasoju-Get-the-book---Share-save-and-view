@@ -15,24 +15,39 @@ class ViewController: UIViewController {
     
    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBAction func loginButton(_ sender: Any) {
+    @IBAction func loginButton(_ sender: AnyObject) {
+        
         let userEmail = usernameTextField.text;
         let password = passwordTextField.text;
+        
         //Check for empty fields
         if((userEmail?.isEmpty)! || (password?.isEmpty)!)
         {
             displayAlertMessage("All feilds are required.");
             return;
         }
-        // Store data
-        
-        //Dispaly alert message with confirmation
         
         
+        
+        // Storing the data
+    let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
+    let passwordStored = UserDefaults.standard.string(forKey: "password")
+        
+    if(userEmailStored == userEmail)
+    {
+        if(passwordStored == password)
+        {
+            //Login successful
+            UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+            UserDefaults.standard.synchronize();
+            performSegue(withIdentifier: "librarianView", sender: self)
+        }
     }
+        
+}
     
     func displayAlertMessage(_ userMessage: String){
-        var myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert);
+        let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert);
         
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil);
         
@@ -43,7 +58,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func startButton(_ sender: Any) {
-        
+        performSegue(withIdentifier: "userView", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

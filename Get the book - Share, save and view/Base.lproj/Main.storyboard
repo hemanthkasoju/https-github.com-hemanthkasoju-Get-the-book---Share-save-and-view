@@ -88,7 +88,7 @@
                                 </state>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rbb-2i-IgC"/>
-                                    <segue destination="YJ2-XH-7sm" kind="presentation" identifier="userView" id="vk9-Qe-GEB"/>
+                                    <segue destination="YJ2-XH-7sm" kind="show" identifier="userView" id="GYx-eT-D7B"/>
                                 </connections>
                             </button>
                         </subviews>
