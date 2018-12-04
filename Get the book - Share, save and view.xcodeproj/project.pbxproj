@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		97540A6821B5DDE600234B98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97540A6721B5DDE600234B98 /* ViewController.swift */; };
+		97540A6A21B6022D00234B98 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97540A6921B6022D00234B98 /* UserViewController.swift */; };
 		97F083F921B1FAA4007B9D7B /* square.png in Resources */ = {isa = PBXBuildFile; fileRef = 97F083F821B1FAA3007B9D7B /* square.png */; };
 		D364C94C21ADCDC9002AFF4E /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364C94B21ADCDC9002AFF4E /* BookDetailsViewController.swift */; };
 		D364C94E21ADF646002AFF4E /* DisplayBookDetaisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D364C94D21ADF646002AFF4E /* DisplayBookDetaisViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		97540A6721B5DDE600234B98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		97540A6921B6022D00234B98 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		97F083F821B1FAA3007B9D7B /* square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = square.png; sourceTree = "<group>"; };
 		D364C94B21ADCDC9002AFF4E /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		D364C94D21ADF646002AFF4E /* DisplayBookDetaisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayBookDetaisViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FE36B6E4219A2C90001A9979 /* QRViewController.swift */,
 				97540A6721B5DDE600234B98 /* ViewController.swift */,
 				FE36B6E6219A2C90001A9979 /* Main.storyboard */,
+				97540A6921B6022D00234B98 /* UserViewController.swift */,
 				D364C95321B1A14B002AFF4E /* BookTableViewController.swift */,
 				D364C95121B198AD002AFF4E /* BookTableViewCell.swift */,
 				D364C94D21ADF646002AFF4E /* DisplayBookDetaisViewController.swift */,
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE36B6E5219A2C90001A9979 /* QRViewController.swift in Sources */,
+				97540A6A21B6022D00234B98 /* UserViewController.swift in Sources */,
 				D364C94C21ADCDC9002AFF4E /* BookDetailsViewController.swift in Sources */,
 				D364C94E21ADF646002AFF4E /* DisplayBookDetaisViewController.swift in Sources */,
 				D364C95021AE2A07002AFF4E /* Book.swift in Sources */,

@@ -62,7 +62,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPh-Bv-wF1"/>
-                                    <segue destination="OZx-zY-Ss0" kind="presentation" identifier="librarianView" id="xXL-rH-cpb"/>
+                                    <segue destination="xKd-PJ-Gt9" kind="show" identifier="librarianView" id="NO0-nK-HBP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-----------------------OR----------------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALD-Fz-l1A">
@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="-1082.4000000000001" y="-189.3553223388306"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="543-Oe-Fxq">
             <objects>
-                <viewController id="YJ2-XH-7sm" sceneMemberID="viewController">
+                <viewController id="YJ2-XH-7sm" customClass="UserViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yqu-vm-kMr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,6 +119,10 @@
                                 <state key="normal" title="Scan a book" backgroundImage="button">
                                     <color key="titleColor" red="0.95096857369999999" green="0.9952609348" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="scanBookButton:" destination="YJ2-XH-7sm" eventType="touchUpInside" id="N75-y2-ssU"/>
+                                    <segue destination="xKd-PJ-Gt9" kind="show" identifier="scanBook" id="p01-8y-SFH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-SW-S3L">
                                 <rect key="frame" x="75" y="160" width="225" height="70"/>
@@ -127,6 +131,10 @@
                                 <state key="normal" title="View existing books" backgroundImage="button">
                                     <color key="titleColor" red="0.95096857369999999" green="0.9952609348" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="savedBooksButton:" destination="YJ2-XH-7sm" eventType="touchUpInside" id="g1F-Qo-DOZ"/>
+                                    <segue destination="jMp-Eg-tee" kind="show" identifier="savedBooks" id="tdW-Ao-nxH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.66732221075442033" green="0.92197563211864475" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -134,9 +142,6 @@
                         <viewLayoutGuide key="safeArea" id="9pD-bu-259"/>
                     </view>
                     <navigationItem key="navigationItem" id="AiE-5Q-Ags"/>
-                    <connections>
-                        <segue destination="OZx-zY-Ss0" kind="show" identifier="scanBook" id="92K-B2-iYv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="215-PT-ikb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,7 +202,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288.8000000000002" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="1414" y="-189"/>
         </scene>
         <!--Book Details View Controller-->
         <scene sceneID="cX9-cE-b75">
@@ -334,7 +339,7 @@
         <!--Scan-->
         <scene sceneID="hgC-Bp-sWd">
             <objects>
-                <viewController id="OZx-zY-Ss0" customClass="ViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OZx-zY-Ss0" customClass="QRViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sou-uL-uDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-566" y="1267"/>
+            <point key="canvasLocation" x="-137" y="1084"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="Kyj-vO-reN">
@@ -608,7 +613,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWQ-R4-7a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1458" y="1062"/>
+            <point key="canvasLocation" x="-1065" y="1084"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="spa-CI-Xs9">
@@ -626,7 +631,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6C-qz-a20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="-146"/>
+            <point key="canvasLocation" x="1414" y="-1115"/>
         </scene>
     </scenes>
     <resources>
@@ -634,6 +639,7 @@
         <image name="square.png" width="276" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xXL-rH-cpb"/>
+        <segue reference="NO0-nK-HBP"/>
+        <segue reference="tdW-Ao-nxH"/>
     </inferredMetricsTieBreakers>
 </document>
