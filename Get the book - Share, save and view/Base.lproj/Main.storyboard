@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uHA-4R-F1z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPh-Bv-wF1"/>
-                                    <segue destination="xKd-PJ-Gt9" kind="show" identifier="librarianView" id="NO0-nK-HBP"/>
+                                    <segue destination="OZx-zY-Ss0" kind="show" identifier="librarianView" id="aFs-u6-mfh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-----------------------OR----------------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALD-Fz-l1A">
@@ -88,13 +88,14 @@
                                 </state>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rbb-2i-IgC"/>
-                                    <segue destination="YJ2-XH-7sm" kind="show" identifier="userView" id="GYx-eT-D7B"/>
+                                    <segue destination="YJ2-XH-7sm" kind="show" identifier="userView" id="OCg-wa-rAS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.69625375321544891" green="0.93690921368838453" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="yvL-dF-ICb"/>
                     <connections>
                         <outlet property="passwordTextField" destination="ENP-TQ-Azh" id="fgK-YK-39H"/>
                         <outlet property="usernameTextField" destination="E2B-zb-vxY" id="sp4-0B-P7y"/>
@@ -102,9 +103,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1082.4000000000001" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="-143.19999999999999" y="-189.3553223388306"/>
         </scene>
-        <!--User View Controller-->
+        <!--What would you like to do?-->
         <scene sceneID="543-Oe-Fxq">
             <objects>
                 <viewController id="YJ2-XH-7sm" customClass="UserViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glw-pP-qJ1">
-                                <rect key="frame" x="75" y="299" width="225" height="69"/>
+                                <rect key="frame" x="75" y="299" width="224" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="Scan a book" backgroundImage="button">
@@ -121,14 +122,14 @@
                                 </state>
                                 <connections>
                                     <action selector="scanBookButton:" destination="YJ2-XH-7sm" eventType="touchUpInside" id="N75-y2-ssU"/>
-                                    <segue destination="xKd-PJ-Gt9" kind="show" identifier="scanBook" id="p01-8y-SFH"/>
+                                    <segue destination="OZx-zY-Ss0" kind="show" identifier="scanBook" id="c58-ZO-LDA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-SW-S3L">
-                                <rect key="frame" x="75" y="160" width="225" height="70"/>
+                                <rect key="frame" x="75" y="148" width="224" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="View existing books" backgroundImage="button">
+                                <state key="normal" title="View saved books" backgroundImage="button">
                                     <color key="titleColor" red="0.95096857369999999" green="0.9952609348" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -141,11 +142,11 @@
                         <color key="tintColor" red="0.49699798147217988" green="0.92057665949592438" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="9pD-bu-259"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AiE-5Q-Ags"/>
+                    <navigationItem key="navigationItem" title="What would you like to do?" id="AiE-5Q-Ags"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="215-PT-ikb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="322" y="-189"/>
+            <point key="canvasLocation" x="1414" y="-183"/>
         </scene>
         <!--Book Table View Controller-->
         <scene sceneID="vWZ-K2-KCO">
@@ -202,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="-189"/>
+            <point key="canvasLocation" x="2436" y="-183"/>
         </scene>
         <!--Book Details View Controller-->
         <scene sceneID="cX9-cE-b75">
@@ -484,7 +485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29e-zr-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="559"/>
+            <point key="canvasLocation" x="1350" y="614"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="kVa-9R-clj">
@@ -598,24 +599,6 @@
             <point key="canvasLocation" x="1350" y="1266"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="6pu-OP-gvb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xKd-PJ-Gt9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mPn-W4-QRo">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="OZx-zY-Ss0" kind="relationship" relationship="rootViewController" id="v1j-Lo-kYh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zWQ-R4-7a9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1065" y="1084"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="spa-CI-Xs9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5fd-EA-sKd" sceneMemberID="viewController">
@@ -633,13 +616,31 @@
             </objects>
             <point key="canvasLocation" x="1414" y="-1115"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7CG-fP-dc0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uHA-4R-F1z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5d-47-Aqy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8c5-iS-YjP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnx-RK-RKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1082.4000000000001" y="-189.3553223388306"/>
+        </scene>
     </scenes>
     <resources>
         <image name="button" width="300" height="96"/>
         <image name="square.png" width="276" height="276"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NO0-nK-HBP"/>
+        <segue reference="c58-ZO-LDA"/>
         <segue reference="tdW-Ao-nxH"/>
     </inferredMetricsTieBreakers>
 </document>
