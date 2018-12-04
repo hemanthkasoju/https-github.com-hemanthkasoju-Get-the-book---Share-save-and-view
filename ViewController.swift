@@ -58,7 +58,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func startButton(_ sender: Any) {
-        performSegue(withIdentifier: "userView", sender: self)
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "userView"
+            {
+                let viewController = segue.destination as! UserViewController
+            }
+        }
+       // performSegue(withIdentifier: "userView", sender: self)
     }
     
     override func viewDidLoad() {
