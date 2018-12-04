@@ -62,7 +62,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPh-Bv-wF1"/>
-                                    <segue destination="OZx-zY-Ss0" kind="show" identifier="librarianView" id="aFs-u6-mfh"/>
+                                    <segue destination="gRp-D6-tL9" kind="show" identifier="librarianView" id="mHC-s4-lcQ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-----------------------OR----------------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALD-Fz-l1A">
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-143.19999999999999" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="-1519" y="-183"/>
         </scene>
         <!--What would you like to do?-->
         <scene sceneID="543-Oe-Fxq">
@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="215-PT-ikb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="-183"/>
+            <point key="canvasLocation" x="-79" y="-183"/>
         </scene>
         <!--Book Table View Controller-->
         <scene sceneID="vWZ-K2-KCO">
@@ -203,7 +203,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2436" y="-183"/>
+            <point key="canvasLocation" x="1350" y="-183"/>
         </scene>
         <!--Book Details View Controller-->
         <scene sceneID="cX9-cE-b75">
@@ -335,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IoL-qc-K8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="2037"/>
+            <point key="canvasLocation" x="-1519" y="2167"/>
         </scene>
         <!--Scan-->
         <scene sceneID="hgC-Bp-sWd">
@@ -364,7 +364,6 @@
                         <outlet property="square" destination="Jwd-UZ-r23" id="bz0-CK-AM7"/>
                         <segue destination="YbT-72-cm2" kind="show" identifier="showDetails" id="b2b-K5-LpA"/>
                         <segue destination="h0a-kc-3Ft" kind="show" identifier="existingDetails" id="lon-Ti-MWa"/>
-                        <segue destination="o1Y-wy-AeF" kind="show" identifier="addDetails" id="VQT-eJ-eQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,7 +484,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29e-zr-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="614"/>
+            <point key="canvasLocation" x="1350" y="539"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="kVa-9R-clj">
@@ -596,7 +595,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="re4-wI-cXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="1266"/>
+            <point key="canvasLocation" x="1350" y="1531"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7CG-fP-dc0">
@@ -614,14 +613,46 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="-1082.4000000000001" y="-189.3553223388306"/>
+            <point key="canvasLocation" x="-2935" y="-183"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="nfc-67-Ms8">
+            <objects>
+                <viewController id="gRp-D6-tL9" customClass="QRViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rg6-7h-kn0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="square.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qny-r6-Yms">
+                                <rect key="frame" x="27" y="173" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="3Q2-eS-hFs"/>
+                                    <constraint firstAttribute="width" constant="320" id="Kmo-Vw-pBS"/>
+                                    <constraint firstAttribute="width" secondItem="Qny-r6-Yms" secondAttribute="height" multiplier="1:1" id="gYz-WU-XOd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="y4w-6W-V6u"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scan" id="MJx-he-BYM">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="EEP-bd-cpX">
+                            <connections>
+                                <segue destination="o1Y-wy-AeF" kind="show" identifier="addDetails" id="yqI-sK-WGq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="square" destination="Qny-r6-Yms" id="AyS-0q-ahU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xK-5K-BIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1519" y="1050"/>
         </scene>
     </scenes>
     <resources>
         <image name="button" width="300" height="96"/>
         <image name="square.png" width="276" height="276"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="c58-ZO-LDA"/>
-    </inferredMetricsTieBreakers>
 </document>

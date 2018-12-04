@@ -24,7 +24,12 @@ class BookDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
         createGenrePicker()
         createLanguagePicker()
         createToolBar()
+        
+        //To dismiss the keyboard.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
+    
     func createGenrePicker() {
         let genrePicker = UIPickerView()
         genrePicker.delegate = self
@@ -78,6 +83,11 @@ class BookDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
             languageText.inputAccessoryView = toolBar
    }
     @objc func dismissPicker(){
+        view.endEditing(true)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     

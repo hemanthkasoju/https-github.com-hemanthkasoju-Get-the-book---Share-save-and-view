@@ -65,9 +65,13 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                    {
                        performSegue(withIdentifier: "showDetails",sender: self);
                    }
-                    else
+                    else if object.stringValue == "0002"
                    {
                        performSegue(withIdentifier: "existingDetails", sender: self)
+                   }
+                    else
+                   {
+                    performSegue(withIdentifier: "addDetails", sender: self)
                     }
                     
                 }
