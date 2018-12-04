@@ -60,11 +60,19 @@ class ViewController: UIViewController {
     @IBAction func startButton(_ sender: Any) {
         performSegue(withIdentifier: "userView", sender: self)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Dismiss the keyboard when the user taps anywhere on the screen
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
 
     /*

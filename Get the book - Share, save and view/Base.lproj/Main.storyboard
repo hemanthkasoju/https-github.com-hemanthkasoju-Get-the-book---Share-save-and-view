@@ -369,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-137" y="1084"/>
+            <point key="canvasLocation" x="-79" y="1051"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="Kyj-vO-reN">
