@@ -16,7 +16,13 @@ class UserViewController: UIViewController {
     
     
     @IBAction func scanBookButton(_ sender: Any) {
-        performSegue(withIdentifier: "scanBook", sender: self)
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "savedBooks"
+            {
+                let viewController = segue.destination as! QRViewController
+            }
+        }
+        //performSegue(withIdentifier: "scanBook", sender: self)
     }
     
     
