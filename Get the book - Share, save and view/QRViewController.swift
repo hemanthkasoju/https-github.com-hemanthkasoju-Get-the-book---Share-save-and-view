@@ -63,15 +63,35 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     
                    if object.stringValue == "0001"
                    {
-                       performSegue(withIdentifier: "showDetails",sender: self);
+                    
+                    let alert = UIAlertController(title: "QR Code", message: "Marlery & Me", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction) -> Void in
+                        self.performSegue(withIdentifier: "showDetails", sender: self)
+                    }))
+                    
+                    present(alert, animated: true, completion: nil)
                    }
                     else if object.stringValue == "0002"
                    {
-                       performSegue(withIdentifier: "existingDetails", sender: self)
+                    let alert = UIAlertController(title: "QR Code", message: "Five point someone", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction) -> Void in
+                        self.performSegue(withIdentifier: "existingDetails", sender: self)
+                    }))
+                    
+                    present(alert, animated: true, completion: nil)
+                    
                    }
                     else
                    {
-                    performSegue(withIdentifier: "addDetails", sender: self)
+                    let alert = UIAlertController(title: "QR Code", message: "Five point someone", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction) -> Void in
+                        self.performSegue(withIdentifier: "addDetails", sender: self)
+                    }))
+                    
+                    present(alert, animated: true, completion: nil)
                     }
                     
                 }
@@ -85,3 +105,5 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     }
 
 }
+
+
