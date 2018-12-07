@@ -25,20 +25,38 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         //Creating session
         let session = AVCaptureSession()
         
-        //Define capture devcie
-        let captureDevice = AVCaptureDevice.default(for: .video)
+        //Define capture devcie - old original code
+//        let captureDevice = AVCaptureDevice.default(for: .video)
+//
+//        do
+//        {
+//            //The fault with the code..
+//            let input = try AVCaptureDeviceInput(device: captureDevice!)
+//            session.addInput(input)
+//        }
+//        catch
+//        {
+//            print ("ERROR")
+//        }
         
-        do
+      // let captureDevice = AVCaptureDevice.default(for: .video)
+        var captureDevice: AVCaptureDevice!
+        let captureDeviceInput: AVCaptureDeviceInput?
+        do {
+        captureDeviceInput = try AVCaptureDeviceInput(device: captureDevice)
+      
+        if let captureDeviceInput = captureDeviceInput
         {
-            //The fault with the code..
-            let input = try AVCaptureDeviceInput(device: captureDevice!)
-            session.addInput(input)
+            if session.canAddInput(captureDeviceInput) {
+                session.addInput(captureDeviceInput)
+            }
+        }
         }
         catch
         {
-            print ("ERROR")
+            // Do something for a nil result (or nothing, if reasonable)
+            print("Error")
         }
-        
         let output = AVCaptureMetadataOutput()
         session.addOutput(output)
         
