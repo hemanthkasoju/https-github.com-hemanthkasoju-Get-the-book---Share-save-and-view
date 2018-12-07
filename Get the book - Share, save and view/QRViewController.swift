@@ -26,11 +26,12 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         let session = AVCaptureSession()
         
         //Define capture devcie
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+        let captureDevice = AVCaptureDevice.default(for: .video)
         
         do
         {
-            let input = try AVCaptureDeviceInput(device: captureDevice)
+            //The fault with the code..
+            let input = try AVCaptureDeviceInput(device: captureDevice!)
             session.addInput(input)
         }
         catch
@@ -43,13 +44,13 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         
         output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         
-        output.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+        output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
         
         video = AVCaptureVideoPreviewLayer(session: session)
         video.frame = view.layer.bounds
         view.layer.addSublayer(video)
         
-        self.view.bringSubview(toFront: square)
+        self.view.bringSubviewToFront(square)
         
         session.startRunning()
     }
@@ -60,7 +61,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
         {
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject
             {
-                if object.type == AVMetadataObjectTypeQRCode
+                if object.type == AVMetadataObject.ObjectType.qr
                 {
                     
                    if object.stringValue == "0001"

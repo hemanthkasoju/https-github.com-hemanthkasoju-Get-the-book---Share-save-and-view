@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     func displayAlertMessage(_ userMessage: String){
         let myAlert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: .alert);
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil);
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil);
         
         myAlert.addAction(okAction);
         
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     }
     
     //Calls this function when the tap is recognized.
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
