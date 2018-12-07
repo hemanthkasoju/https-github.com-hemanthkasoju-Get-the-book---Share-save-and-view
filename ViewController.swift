@@ -33,16 +33,20 @@ class ViewController: UIViewController {
     let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
     let passwordStored = UserDefaults.standard.string(forKey: "password")
         
-    if(userEmailStored == userEmail)
+    if(userEmail == "admin")
     {
-        if(passwordStored == password)
+        if(password == "admin")
         {
             //Login successful
             UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
             UserDefaults.standard.synchronize();
-            performSegue(withIdentifier: "librarianView", sender: self)
+            performSegue(withIdentifier: "scanBook", sender: self)
         }
     }
+        else
+    { displayAlertMessage("Enter correct credentials.");
+        return;
+        }
         
 }
     
@@ -61,7 +65,7 @@ class ViewController: UIViewController {
         func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "userView"
             {
-                let viewController = segue.destination as! UserViewController
+                let viewController = segue.destination as! QRViewController
             }
         }
        // performSegue(withIdentifier: "userView", sender: self)

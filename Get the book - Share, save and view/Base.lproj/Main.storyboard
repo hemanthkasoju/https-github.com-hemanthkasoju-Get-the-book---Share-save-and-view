@@ -88,7 +88,7 @@
                                 </state>
                                 <connections>
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rbb-2i-IgC"/>
-                                    <segue destination="YJ2-XH-7sm" kind="show" identifier="userView" id="OCg-wa-rAS"/>
+                                    <segue destination="OZx-zY-Ss0" kind="show" identifier="scanBook" id="gSB-sX-9dw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,52 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-1519" y="-183"/>
         </scene>
-        <!--What would you like to do?-->
-        <scene sceneID="543-Oe-Fxq">
-            <objects>
-                <viewController id="YJ2-XH-7sm" customClass="UserViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yqu-vm-kMr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glw-pP-qJ1">
-                                <rect key="frame" x="75" y="299" width="224" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="Scan a book" backgroundImage="button">
-                                    <color key="titleColor" red="0.95096857369999999" green="0.9952609348" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="scanBookButton:" destination="YJ2-XH-7sm" eventType="touchUpInside" id="N75-y2-ssU"/>
-                                    <segue destination="OZx-zY-Ss0" kind="show" identifier="scanBook" id="c58-ZO-LDA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovp-SW-S3L">
-                                <rect key="frame" x="75" y="148" width="224" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="View saved books" backgroundImage="button">
-                                    <color key="titleColor" red="0.95096857369999999" green="0.9952609348" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="savedBooksButton:" destination="YJ2-XH-7sm" eventType="touchUpInside" id="g1F-Qo-DOZ"/>
-                                    <segue destination="jMp-Eg-tee" kind="show" identifier="savedBooks" id="tdW-Ao-nxH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.66732221075442033" green="0.92197563211864475" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.49699798147217988" green="0.92057665949592438" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="9pD-bu-259"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="What would you like to do?" id="AiE-5Q-Ags"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="215-PT-ikb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-79" y="-183"/>
-        </scene>
         <!--Book Table View Controller-->
         <scene sceneID="vWZ-K2-KCO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="jMp-Eg-tee" customClass="BookTableViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ba6-1J-886">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -201,7 +159,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="nhI-5n-3N9"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ohb-rw-AQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1350" y="-183"/>
         </scene>
@@ -303,8 +260,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Link to online access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-xS-8mA">
-                                <rect key="frame" x="13" y="510" width="166" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-xS-8mA">
+                                <rect key="frame" x="13" y="510" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
@@ -362,15 +319,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="square" destination="Jwd-UZ-r23" id="bz0-CK-AM7"/>
-                        <segue destination="YbT-72-cm2" kind="show" identifier="showDetails" id="b2b-K5-LpA"/>
                         <segue destination="h0a-kc-3Ft" kind="show" identifier="existingDetails" id="lon-Ti-MWa"/>
+                        <segue destination="YbT-72-cm2" kind="show" identifier="showDetails" id="gjf-pd-URx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oFb-VT-3ny" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79" y="1051"/>
         </scene>
-        <!--Book Details-->
+        <!--Marley and me-->
         <scene sceneID="Kyj-vO-reN">
             <objects>
                 <viewController id="YbT-72-cm2" customClass="DisplayBookDetaisViewController" customModule="Get_the_book___Share__save_and_view" customModuleProvider="target" sceneMemberID="viewController">
@@ -393,7 +350,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AuthorName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckE-nx-txR">
-                                <rect key="frame" x="85" y="91" width="97" height="21"/>
+                                <rect key="frame" x="85" y="91" width="274" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -406,8 +363,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GenreName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo0-4j-L1P">
-                                <rect key="frame" x="85" y="139" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comedy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo0-4j-L1P">
+                                <rect key="frame" x="85" y="139" width="274" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -421,7 +378,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Publisher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-Wq-WMZ">
-                                <rect key="frame" x="109" y="187" width="121" height="21"/>
+                                <rect key="frame" x="109" y="187" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -435,7 +392,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ria-5g-Ps8">
-                                <rect key="frame" x="113" y="242" width="125" height="21"/>
+                                <rect key="frame" x="113" y="242" width="246" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -449,19 +406,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online access link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9C-rX-Caf">
-                                <rect key="frame" x="16" y="334" width="138" height="21"/>
+                                <rect key="frame" x="16" y="334" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBZ-5P-Wfb">
-                                <rect key="frame" x="24" y="445" width="119" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title=" Save to device" backgroundImage="button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6E-s2-VAr">
-                                <rect key="frame" x="216" y="445" width="118" height="47"/>
+                                <rect key="frame" x="128" y="445" width="118" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Share" backgroundImage="button"/>
                                 <connections>
@@ -473,9 +425,10 @@
                         <color key="tintColor" red="0.60768525409999996" green="1" blue="0.97778778509999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="5y0-wf-ykb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Book Details" id="CXC-EY-Ga1"/>
+                    <navigationItem key="navigationItem" title="Marley and me" id="CXC-EY-Ga1"/>
                     <connections>
                         <outlet property="authorName" destination="ckE-nx-txR" id="7At-Ga-CBx"/>
+                        <outlet property="genreText" destination="vo0-4j-L1P" id="QjJ-6M-ZHM"/>
                         <outlet property="languageName" destination="Ria-5g-Ps8" id="wbM-vP-E8j"/>
                         <outlet property="publisherName" destination="Swq-Wq-WMZ" id="HmV-Iz-Rva"/>
                         <outlet property="titleName" destination="20F-fc-nYo" id="POa-o9-0AY"/>
@@ -484,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29e-zr-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="539"/>
+            <point key="canvasLocation" x="1349.5999999999999" y="538.38080959520244"/>
         </scene>
         <!--Book Details-->
         <scene sceneID="kVa-9R-clj">
@@ -509,7 +462,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AuthorName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP4-IW-rez">
-                                <rect key="frame" x="85" y="91" width="97" height="21"/>
+                                <rect key="frame" x="85" y="91" width="274" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -522,8 +475,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GenreName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKQ-KV-V2D">
-                                <rect key="frame" x="85" y="139" width="92" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comedy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKQ-KV-V2D">
+                                <rect key="frame" x="85" y="139" width="274" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -537,7 +490,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Publisher Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q3-k6-juh">
-                                <rect key="frame" x="109" y="187" width="121" height="21"/>
+                                <rect key="frame" x="109" y="187" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -551,7 +504,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Language Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHH-9q-jEY">
-                                <rect key="frame" x="113" y="242" width="125" height="21"/>
+                                <rect key="frame" x="113" y="242" width="246" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -565,7 +518,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online access link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfA-rE-k0N">
-                                <rect key="frame" x="16" y="334" width="138" height="21"/>
+                                <rect key="frame" x="16" y="334" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -595,12 +548,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="re4-wI-cXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="1531"/>
+            <point key="canvasLocation" x="1349.5999999999999" y="1530.5847076461771"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7CG-fP-dc0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bnx-RK-RKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uHA-4R-F1z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5d-47-Aqy">
@@ -612,6 +564,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8c5-iS-YjP"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnx-RK-RKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2935" y="-183"/>
         </scene>

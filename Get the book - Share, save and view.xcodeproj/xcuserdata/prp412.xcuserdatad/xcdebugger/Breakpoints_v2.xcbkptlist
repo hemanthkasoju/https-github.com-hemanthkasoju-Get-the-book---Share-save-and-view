@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ViewController.swift"
+            timestampString = "565797657.193812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "loginButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Get the book - Share, save and view/QRViewController.swift"
+            timestampString = "565797657.193874"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "captureOutput(_:didOutputMetadataObjects:from:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Get_the_book___Share__save_and_view.QRViewController.captureOutput(_: Swift.Optional&lt;__C.AVCaptureOutput&gt;, didOutputMetadataObjects: Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;, from: Swift.Optional&lt;__C.AVCaptureConnection&gt;) -&gt; ()"
+                  moduleName = "Get the book - Share, save and view"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prp412/Documents/Share-save-and-view/Get%20the%20book%20-%20Share,%20save%20and%20view/QRViewController.swift"
+                  timestampString = "565796379.96946"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1592">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in Get_the_book___Share__save_and_view.QRViewController.captureOutput(_: Swift.Optional&lt;__C.AVCaptureOutput&gt;, didOutputMetadataObjects: Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;, from: Swift.Optional&lt;__C.AVCaptureConnection&gt;) -&gt; ()"
+                  moduleName = "Get the book - Share, save and view"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prp412/Documents/Share-save-and-view/Get%20the%20book%20-%20Share,%20save%20and%20view/QRViewController.swift"
+                  timestampString = "565796379.971468"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Get the book - Share, save and view/QRViewController.swift"
+            timestampString = "565797657.193939"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "captureOutput(_:didOutputMetadataObjects:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Get the book - Share, save and view/QRViewController.swift"
+            timestampString = "565797657.193989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "captureOutput(_:didOutputMetadataObjects:from:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Get_the_book___Share__save_and_view.QRViewController.captureOutput(_: Swift.Optional&lt;__C.AVCaptureOutput&gt;, didOutputMetadataObjects: Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;, from: Swift.Optional&lt;__C.AVCaptureConnection&gt;) -&gt; ()"
+                  moduleName = "Get the book - Share, save and view"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prp412/Documents/Share-save-and-view/Get%20the%20book%20-%20Share,%20save%20and%20view/QRViewController.swift"
+                  timestampString = "565796379.980644"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "2364">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UIAlertAction) -&gt; () in Get_the_book___Share__save_and_view.QRViewController.captureOutput(_: Swift.Optional&lt;__C.AVCaptureOutput&gt;, didOutputMetadataObjects: Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;, from: Swift.Optional&lt;__C.AVCaptureConnection&gt;) -&gt; ()"
+                  moduleName = "Get the book - Share, save and view"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prp412/Documents/Share-save-and-view/Get%20the%20book%20-%20Share,%20save%20and%20view/QRViewController.swift"
+                  timestampString = "565796379.9828039"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Get the book - Share, save and view/QRViewController.swift"
+            timestampString = "565797657.194038"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "captureOutput(_:didOutputMetadataObjects:from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

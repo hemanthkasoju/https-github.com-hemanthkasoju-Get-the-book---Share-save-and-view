@@ -6,32 +6,32 @@
 //  Copyright © 2018 Hemanth Kasoju. All rights reserved.
 //
 
-import UIKit
+//import UIKit
+//
+//class UserViewController: UIViewController {
+//
+//   /* @IBAction func savedBooksButton(_ sender: Any) {
+//        performSegue(withIdentifier: "savedBooks", sender: self)
+//    }*/
+//
+//
+//    @IBAction func scanBookButton(_ sender: Any) {
+//        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//            if segue.identifier == "savedBooks"
+//            {
+//                let viewController = segue.destination as! QRViewController
+//            }
+//        }
+//        //performSegue(withIdentifier: "scanBook", sender: self)
+//    }
+//
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//        // Do any additional setup after loading the view.
+//    }
 
-class UserViewController: UIViewController {
-
-    @IBAction func savedBooksButton(_ sender: Any) {
-        performSegue(withIdentifier: "savedBooks", sender: self)
-    }
-    
-    
-    @IBAction func scanBookButton(_ sender: Any) {
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "savedBooks"
-            {
-                let viewController = segue.destination as! QRViewController
-            }
-        }
-        //performSegue(withIdentifier: "scanBook", sender: self)
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -43,4 +43,4 @@ class UserViewController: UIViewController {
     }
     */
 
-}
+//}

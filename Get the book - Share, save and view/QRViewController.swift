@@ -16,6 +16,8 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     var video = AVCaptureVideoPreviewLayer()
     
+    var storedN : String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -68,6 +70,15 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction) -> Void in
                         self.performSegue(withIdentifier: "showDetails", sender: self)
+//                        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//                                        if segue.identifier == "existingDetails"
+//                                        {
+//                                            self.storedN = "1"
+//                                          let viewController = segue.destination as! DisplayBookDetaisViewController
+//                                            viewController.n = self.storedN
+//                                        }
+//                                    }
+                        
                     }))
                     
                     present(alert, animated: true, completion: nil)
@@ -78,6 +89,22 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                     alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction) -> Void in
                         self.performSegue(withIdentifier: "existingDetails", sender: self)
+//                        func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+//                            if segue!.identifier == "existingDetails" {
+//                                let viewController:DisplayBookDetaisViewController = segue!.destination as! DisplayBookDetaisViewController
+//                                viewController.n = "2"
+//
+//                            }
+//
+//                        }
+////                        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+////                            if segue.identifier == "existingDetails"
+////                            {
+////                                self.storedN = "2"
+////                                let viewController = segue.destination as! DisplayBookDetaisViewController
+////                                viewController.n = self.storedN
+////                            }
+////                        }
                     }))
                     
                     present(alert, animated: true, completion: nil)
@@ -85,7 +112,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
                    }
                     else
                    {
-                    let alert = UIAlertController(title: "QR Code", message: "Five point someone", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "QR Code", message: "Book not found", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Retake", style: .default, handler: nil))
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert:UIAlertAction) -> Void in
                         self.performSegue(withIdentifier: "addDetails", sender: self)
